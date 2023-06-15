@@ -33,7 +33,7 @@ def freshness_label(freshness_percentage):
     elif freshness_percentage > 0:
         return "Verde"
     else:
-        return "Estragado"
+        return "Inproprio para o consumo"
 
 def price_to_text(price):
     if price == 0:
