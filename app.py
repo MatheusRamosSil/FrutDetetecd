@@ -29,7 +29,7 @@ def freshness_label(freshness_percentage):
     elif freshness_percentage > 65:
         return "Bom"
     elif freshness_percentage > 50:
-        return "Cukup Baik"
+        return "Muito bom"
     elif freshness_percentage > 0:
         return "Verde"
     else:
