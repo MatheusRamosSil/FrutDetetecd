@@ -25,15 +25,15 @@ def get_model():
 
 def freshness_label(freshness_percentage):
     if freshness_percentage > 90:
-        return "Segar"
+        return "Fresco"
     elif freshness_percentage > 65:
-        return "Baik"
+        return "Bom"
     elif freshness_percentage > 50:
         return "Cukup Baik"
     elif freshness_percentage > 0:
-        return "Tidak Baik"
+        return "Verde"
     else:
-        return "Busuk"
+        return "Estragado"
 
 def price_to_text(price):
     if price == 0:
@@ -42,12 +42,10 @@ def price_to_text(price):
     return str(price)
 
 def price_by_freshness_percentage(freshness_percentage):
-    return int(freshness_percentage/100*10000)
+    return int(freshness_percentage/100*10)
 
 def freshness_percentage_by_cv_image(cv_image):
-    """
-    Reference: https://github.com/anshuls235/freshness-detector/blob/4cd289fb05a14d3c710813fca4d8d03987d656e5/main.py#L40
-    """
+  
     mean = (0.7369, 0.6360, 0.5318)
     std = (0.3281, 0.3417, 0.3704)
     transformation = transforms.Compose([
